@@ -1,0 +1,121 @@
+<!----------NAVBAR--------->
+
+
+<nav>
+  <div class="container">
+    <div class="content">
+      <h2 class="logo">Products Sales Management</h2>
+      <ul>
+        <li> <a style="text-decoration: none; color: white;" href="" routerLink="/products">Products</a></li>
+        <li> <a style="text-decoration: none; color: white;" href="" routerLink="/cart">cart</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="cartBox">
+
+    <form formGroup="form" style="margin-bottom: 30px;">
+      <div class="row">
+        <!----------START DATE & END DATE--------->
+
+        <div class="col-md-3">
+          <label for="">Start Date </label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-md-3">
+          <label for="">End Date </label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-md-2 d-flex align-items-end">
+          <button class="btn btn-success">Apply</button>
+        </div>
+      </div>
+      <!----------TABLE FOR PRODUCTS IN THE CART--------->
+
+    </form>
+    <table class="table table-striped">
+
+      <thead>
+        <tr>
+          <th></th>
+          <th>Date</th>
+
+          <th>Quantity</th>
+
+          <th></th>
+
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of carts; let index = index">
+
+          <td></td>
+          <td>{{item.date}} </td>
+          <td>
+            {{item.products.length}}
+
+          </td>
+
+          <td>
+            <!----------DELETE AND VIEW BUTTONS--------->
+
+            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-primary">View</button>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+  </div>
+
+</div>
+<!----------FOOTER--------->
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">watch</a></li>
+          <li><a href="#">bag</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">dress</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
